@@ -7,6 +7,8 @@ const octokit = new Octkit({
   auth: `token ${process.env.GITHUB_ACCESS_TOKEN}`
 });
 
+const channel = '<notified_channel_id>';
+
 export class Public implements MessageBuilder {
   supports(request: Request): boolean {
     if (request.githubEvent === 'repository') {
@@ -24,7 +26,7 @@ export class Public implements MessageBuilder {
     const user = res.data;
 
     return {
-      channel: '<notified_channel_id>',
+      channel: channel,
       text: `${repository.full_name} is now public!`,
       attachments: [
         {
