@@ -1,59 +1,61 @@
 service:
-  name: template-serverless-typescript
+  name: squealer
 
 # Add the serverless-webpack plugin
 plugins:
   - serverless-webpack
   - serverless-offline
   - serverless-prune-plugin
-#  - serverless-reqvalidator-plugin
-#  - serverless-aws-documentation
+  - serverless-reqvalidator-plugin
+  - serverless-aws-documentation
 
 custom:
   prune:
     automatic: true
     number: 3
-#  documentation:
-#    models:
-#      - name: MemberAdded
-#        description: 'Model for member added'
-#        contentType: application/json
-#        schema: ${file(models/member_added.json)}
+  documentation:
+    models:
+      - name: MyEmpty
+        description: 'My empty model'
+        contentType: application/json
+        schema: ${file(models/empty.json)}
 
 provider:
   name: aws
-#  region: ap-northeast-1
+  region: ap-northeast-1
   runtime: nodejs8.10
   logRetentionInDays: 1
-#  environment:
-#    KEY: value
+  environment:
+    GITHUB_ACCESS_TOKEN: <your_access_token>
+    GITHUB_WEBHOOK_SECRET: <your_webhook_secret>
+    SLACK_WEBHOOK_URL: <your_incoming_webhook_url>
 
-#resources:
-#  Resources:
-#    bodyAndParams:
-#      Type: AWS::ApiGateway::RequestValidator
-#      Properties:
-#        Name: body-and-params
-#        RestApiId:
-#          Ref: ApiGatewayRestApi
-#        ValidateRequestBody: true
-#        ValidateRequestParameters: true
+resources:
+  Resources:
+    bodyAndParams:
+      Type: AWS::ApiGateway::RequestValidator
+      Properties:
+        Name: body-and-params
+        RestApiId:
+          Ref: ApiGatewayRestApi
+        ValidateRequestBody: true
+        ValidateRequestParameters: true
 
 functions:
   hello:
     handler: handler.hello
     events:
       - http:
-          method: get
+          method: post
           path: hello
-#          documentation:
-#            requestHeaders:
-#              - name: X-Hub-Signature
-#                required: true
-#              - name: X-GitHub-Delivery
-#                required: true
-#              - name: X-GitHub-Event
-#                required: true
-#            requestModels:
-#              application/json: MemberAdded
-#          reqValidatorName: bodyAndParams
+          documentation:
+            requestHeaders:
+              - name: X-Hub-Signature
+                required: true
+              - name: X-GitHub-Delivery
+                required: true
+              - name: X-GitHub-Event
+                required: true
+            requestModels:
+              application/json: MyEmpty
+          reqValidatorName: bodyAndParams

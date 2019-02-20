@@ -1,14 +1,17 @@
 {
-  "name": "template-serverless-typescript",
+  "name": "squealer",
   "private": true,
   "version": "1.0.0",
-  "description": "Serverless webpack example using Typescript",
+  "description": "Squealer squeals on you",
   "main": "handler.js",
   "scripts": {
     "lint": "tslint --fix handler.ts 'src/**/*.ts{,x}'",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "dependencies": {},
+  "dependencies": {
+    "@octokit/rest": "^16.16.0",
+    "@slack/client": "^4.9.0"
+  },
   "devDependencies": {
     "@types/aws-lambda": "^8.10.19",
     "@types/node": "^11.9.4",
