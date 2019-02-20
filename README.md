@@ -2,7 +2,7 @@
   <a href="https://github.com/piotzkhider/squealer">
     <img alt="squealer" src="https://user-images.githubusercontent.com/7950487/53112096-d6a98d00-3581-11e9-8118-d7b05dbe55a6.png" width="365px">
   </a>
-</p>animal_hadaka_debanedumi_group.png
+</p>
 
 <h2 align="center">
   squealer - A squealer who squeals on you.
