@@ -1,8 +1,8 @@
 <p align="center">
   <a href="https://github.com/piotzkhider/squealer">
-    <img alt="squealer" src="hhttps://1.bp.blogspot.com/-yqSXdt2MNfA/V5YArqYC00I/AAAAAAAA8xQ/QLveQ6Riu1Ayel1Q9o-31OxQUJBG2Ld6QCLcB/s800/animal_hadaka_debanedumi_group.png" width="365px">
+    <img alt="squealer" src="https://1.bp.blogspot.com/-yqSXdt2MNfA/V5YArqYC00I/AAAAAAAA8xQ/QLveQ6Riu1Ayel1Q9o-31OxQUJBG2Ld6QCLcB/s800/animal_hadaka_debanedumi_group.png" width="365px">
   </a>
-</p>
+</p>animal_hadaka_debanedumi_group.png
 
 <h2 align="center">
   squealer - A squealer who squeals on you.
