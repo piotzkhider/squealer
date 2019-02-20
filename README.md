@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://github.com/piotzkhider/squealer">
-    <img alt="squealer" src="https://1.bp.blogspot.com/-yqSXdt2MNfA/V5YArqYC00I/AAAAAAAA8xQ/QLveQ6Riu1Ayel1Q9o-31OxQUJBG2Ld6QCLcB/s800/animal_hadaka_debanedumi_group.png" width="365px">
+    <img alt="squealer" src="https://user-images.githubusercontent.com/7950487/53112096-d6a98d00-3581-11e9-8118-d7b05dbe55a6.png" width="365px">
   </a>
 </p>animal_hadaka_debanedumi_group.png
 
